@@ -76,6 +76,8 @@ RUN	sed -i -e "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g" /etc/php/7.1/fpm/php.
 	
 # 安装angular/cli
 RUN npm config set registry https://registry.npm.taobao.org
+RUN npm install n -g
+RUN n stable
 RUN npm install -g @angular/cli
 
 # 清理包
