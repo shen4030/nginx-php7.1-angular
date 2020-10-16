@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
 COPY ./config/run.sh /
+RUN chmod 755 /run.sh
 
 # 准备
 RUN dpkg-divert --local --rename --add /sbin/initctl && \
